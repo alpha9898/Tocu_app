@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tocu/screens/family_memebers.dart';
+import 'package:tocu/screens/pharases_page.dart';
 import '../components/category_item.dart';
 import 'colors.dart';
 import 'numbers_page.dart';
@@ -48,6 +49,12 @@ class HomePage extends StatelessWidget {
             color: Color(0xffE2DAD6),
           ),
           Category(
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext){
+                    return PharasesPage();
+                  }));
+            },
             text: 'Pharases',
             color: Color(0xffE6B9A6),
           ),
@@ -56,11 +63,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-// Color(0xff6482AD)
-// Color(0xff7FA1C3)
-// Color(0xffE2DAD6)
-// Color(0xffE6B9A6)

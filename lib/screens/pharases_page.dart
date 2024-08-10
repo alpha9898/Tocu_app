@@ -1,67 +1,58 @@
 import 'package:flutter/material.dart';
 import '../components/list_item.dart';
+import '../components/phrese_item.dart';
 import '../models/item.dart';
 
-class FamilyMemebersPage extends StatelessWidget {
-  const FamilyMemebersPage({super.key});
-  final List<ItemModel> numbers = const [
+class PharasesPage extends StatelessWidget {
+  const PharasesPage({super.key});
+  final List<ItemModel> phrasesList = const [
     ItemModel(
-      sound: 'sounds/family_members/daughter.wav',
-      image: 'assets/images/family_members/family_daughter.png',
-      enName: 'daughter',
+      sound: 'sounds/phrases/are_you_coming.wav',
+      enName: 'are you coming',
       jpName: 'musume',
     ),
     ItemModel(
       sound: 'sounds/family_members/father.wav',
-      image: 'assets/images/family_members/family_father.png',
       enName: 'father',
       jpName: 'chichioya',
     ),
     ItemModel(
       sound: 'sounds/family_members/grand father.wav',
-      image: 'assets/images/family_members/family_grandfather.png',
       enName: 'grand father',
       jpName: 'sofu',
     ),
     ItemModel(
       sound: 'sounds/family_members/grand mother.wav',
-      image: 'assets/images/family_members/family_grandmother.png',
       enName: 'grand mother',
       jpName: 'sobo',
     ),
     ItemModel(
       sound: 'sounds/family_members/mother.wav',
-      image: 'assets/images/family_members/family_mother.png',
       enName: 'mother',
       jpName: 'hahaoya',
     ),
     ItemModel(
       sound: 'sounds/family_members/older bother.wav',
-      image: 'assets/images/family_members/family_older_brother.png',
       enName: 'older bother',
       jpName: 'ani',
     ),
     ItemModel(
       sound: 'sounds/family_members/older sister.wav',
-      image: 'assets/images/family_members/family_older_sister.png',
       enName: 'older sister',
       jpName: 'ane',
     ),
     ItemModel(
       sound: 'sounds/family_members/son.wav',
-      image: 'assets/images/family_members/family_son.png',
       enName: 'son',
       jpName: 'musuko',
     ),
     ItemModel(
       sound: 'sounds/family_members/younger brohter.wav',
-      image: 'assets/images/family_members/family_younger_brother.png',
       enName: 'younger brohter',
       jpName: 'ototo',
     ),
     ItemModel(
       sound: 'sounds/family_members/younger sister.wav',
-      image: 'assets/images/family_members/family_younger_sister.png',
       enName: 'younger sister',
       jpName: 'imoto',
     ),
@@ -70,13 +61,13 @@ class FamilyMemebersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('FamilyMemebers'),
+          title: Text('pharases'),
           backgroundColor: Color(0xff7FA1C3),
         ),
         body: ListView.builder(
-          itemCount: numbers.length,
+          itemCount: phrasesList.length,
           itemBuilder: (context , index){
-            return Item(item: numbers[index], color: Color(0xff7FA1C3),);
+            return PharasesItem(item: phrasesList[index], color: Color(0xff805c47),);
           }, // children: getList(numbers),
         )
     );

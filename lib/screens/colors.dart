@@ -59,13 +59,13 @@ class ColorsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('FamilyMemebers'),
+          title: Text('Colors'),
           backgroundColor: Color(0xff7FA1C3),
         ),
         body: ListView.builder(
           itemCount: numbers.length,
           itemBuilder: (context , index){
-            return Item(number: numbers[index], color: Color(0xffc0928a),);
+            return Item(item: numbers[index], color: Color(0xffc0928a),);
           }, // children: getList(numbers),
         )
     );
